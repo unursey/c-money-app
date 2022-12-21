@@ -138,6 +138,8 @@ export const Account = () => {
 
   const changeYear = (e) => {
     setYear(e.target.value);
+    const n = count + 1;
+    setCount(n);
   };
 
   return (
