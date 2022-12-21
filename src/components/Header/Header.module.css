@@ -1,0 +1,45 @@
+.header {
+    background-color: var(--header);
+    padding: 20px 0;
+  }
+  .container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav {
+    gap: 30px;
+  }
+  .exit,
+  .nav {
+    display: flex;
+    font-family: Nunito;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .exit {
+    align-items: center;
+    background-color: initial;
+    border: none;
+    color: #fff;
+    gap: 5px;
+  }
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px 0;
+    }
+    .nav {
+      font-size: 12px;
+      gap: 15px;
+    }
+    .exit {
+      font-size: 12px;
+    }
+    .logo {
+      max-width: 100px;
+    }
+    .arrow {
+      max-width: 10px;
+    }
+  }

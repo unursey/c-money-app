@@ -1,0 +1,119 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 80px;
+  }
+  .title {
+    font-family: Comfortaa;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 45px;
+  }
+  .currencies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .currencies__title {
+    font-family: Comfortaa;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+  .sort {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+  }
+  .sort__title {
+    color: var(--text);
+    font-family: Nunito;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .select {
+    background-color: initial;
+    border: none;
+    color: #fff;
+    outline: transparent;
+    width: 170px;
+  }
+  .select option {
+    background-color: var(--bgcolor);
+  }
+  .button {
+    font-family: Nunito;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 70px;
+    padding: 12px 30px;
+    background: linear-gradient(
+      87.4deg,
+      #2e00b1 -11.74%,
+      #8100bd 48.81%,
+      #a400be 113.27%
+    );
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+  } 
+  .button:hover {
+    background: linear-gradient(
+      88.2deg,
+      #a400be -14.85%,
+      #8100bd 50.2%,
+      #2e00b1 115.25%,
+      #2e00b1 115.25%
+    );
+  }
+  .button:focus {
+    background: linear-gradient(
+      88.2deg,
+      #2e00b1 -14.85%,
+      #a400be 50.2%,
+      #2e00b1 115.25%,
+      #2e00b1 115.25%
+    );
+  } 
+  .button:active {
+    background: #2e00b1;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+  }
+  .preloader__container {
+    align-items: center;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .container {
+      justify-content: center;
+    }
+    .title {
+      font-size: 30px;
+      line-height: 35px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .button {
+      margin-bottom: 30px;
+    }
+    .currencies__title9 {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+    .list {
+      margin-top: 20px;
+    }
+  }

@@ -1,0 +1,23 @@
+.footer {
+  align-items: center;
+  bottom: 50px;
+  position: absolute;
+  width: 100%;
+}
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .logo {
+    max-width: 100px;
+  }
+  .copy {
+    font-size: 14px;
+  }
+  .footer {
+    bottom: 20px;
+    width: 90%;
+  }
+}

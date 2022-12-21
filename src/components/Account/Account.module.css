@@ -1,0 +1,234 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 65px;
+}
+.container__header {
+  align-items: center;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.title {
+  font-family: Comfortaa;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 29px;
+}
+.dynamic {
+  background: var(--header);
+  border-radius: 10px;
+  margin-top: 50px;
+  max-height: 330px;
+  padding: 20px;
+  width: 580px;
+  margin-bottom: 30px;
+}
+.dynamic__header {
+  align-items: center;
+  display: flex;
+}
+.dynamic__title {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  margin-right: 20px;
+}
+.dynamic__year {
+  color: var(--text);
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.dynamic__select {
+  background-color: initial;
+  border: none;
+  color: var(--text);
+  margin-left: auto;
+  outline: transparent;
+}
+.dynamic__select option {
+  background-color: var(--header);
+}
+.button__link {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding: 12px 30px;
+  background: linear-gradient(
+    87.4deg,
+    #2e00b1 -11.74%,
+    #8100bd 48.81%,
+    #a400be 113.27%
+  );
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+.button__link::before {
+  content: "";
+  background-image: url("./img/back.svg");
+  width: 12px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+.history {
+  max-width: 580px;
+}
+.history__title {
+  font-family: Comfortaa;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 29px;
+  margin-bottom: 20px;
+}
+.preloader__container {
+  align-items: center;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  width: 100%;
+}
+.transaction {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 100%;
+}
+.transaction__title {
+  margin-bottom: 40px;
+}
+.transaction__form {
+  align-items: flex-end;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+.transaction__input-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+}
+.form__error {
+  position: absolute;
+  bottom: -25px;
+  left: 5px;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  color: rgb(168, 103, 103);
+}
+.transaction__label {
+  color: var(--text);
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 2px;
+  padding-left: 15px;
+}
+.transaction__input {
+  border: 2px solid var(--pink);
+  border-radius: 10px;
+  min-height: 70px;
+  padding: 20px;
+}
+.button {
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  padding: 22.5px 143px;
+  background: linear-gradient(
+    87.4deg,
+    #2e00b1 -11.74%,
+    #8100bd 48.81%,
+    #a400be 113.27%
+  );
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+.button__link:hover,
+.button:hover {
+  background: linear-gradient(
+    88.2deg,
+    #a400be -14.85%,
+    #8100bd 50.2%,
+    #2e00b1 115.25%,
+    #2e00b1 115.25%
+  );
+}
+.button__link:focus,
+.button:focus {
+  background: linear-gradient(
+    88.2deg,
+    #2e00b1 -14.85%,
+    #a400be 50.2%,
+    #2e00b1 115.25%,
+    #2e00b1 115.25%
+  );
+}
+.button__link:active,
+.button:active {
+  background: #2e00b1;
+}
+@media (max-width: 960px) {
+  .transaction__form {
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: start;
+  }
+}
+@media (max-width: 768px) {
+  .container__header {
+    flex-direction: column-reverse;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .button {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+  .dynamic {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
+  .history {
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+  .history__title {
+    font-size: 20px;
+    text-align: center;
+  }
+  .transaction {
+    margin-top: 0;
+  }
+  .transaction__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .transaction__form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .transaction__input-wrap {
+    width: 100%;
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

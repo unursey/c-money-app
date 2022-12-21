@@ -1,0 +1,40 @@
+.card {
+    background: var(--header);
+    border: 2px solid var(--pink);
+    border-radius: 10px;
+    display: flex;
+    flex-basis: 380px;
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .link {
+    cursor: url(./img/cursor.svg), default;
+  }
+  .id {
+    color: var(--text);
+    font-family: Nunito;
+    font-size: 15px;
+    font-style: normal;
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  .balance {
+    font-family: Nunito;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 44px;
+    margin-bottom: 20px;
+  }
+  .balance:after {
+    content: ' ₽';
+  }
+  .info {
+    color: var(--text);
+    display: flex;
+    font-family: Nunito;
+    font-size: 15px;
+    font-weight: 400;
+    justify-content: space-between;
+    line-height: 20px;
+    width: 100%;
+  }

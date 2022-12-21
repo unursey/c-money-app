@@ -1,0 +1,124 @@
+@import "~normalize.css";
+
+@font-face {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('fonts/comfortaa-v40-cyrillic-700.woff2')
+      format('woff2'),
+    url('fonts/comfortaa-v40-cyrillic-700.woff')
+      format('woff');
+}
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+    url('fonts/nunito-v24-cyrillic-regular.woff2')
+      format('woff2'),
+    url('fonts/nunito-v24-cyrillic-regular.woff')
+      format('woff');
+}
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  src: local(''),
+    url('fonts/nunito-v24-cyrillic-600.woff2')
+      format('woff2'),
+    url('fonts/nunito-v24-cyrillic-600.woff')
+      format('woff');
+}
+@font-face {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+    url('fonts/nunito-v24-cyrillic-700.woff2')
+      format('woff2'),
+    url('fonts/nunito-v24-cyrillic-700.woff')
+      format('woff');
+}
+:root {
+  --header: #392350;
+  --bgcolor: #210b36;
+  --text: #c6b6d7;
+  --pink: #9c19ca;
+  --blue: #4b00ca;
+  --white: #ffffff;
+}
+html {
+  box-sizing: border-box;
+  position: relative;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+body {
+  background-color: #210b36;
+  background-color: var(--bgcolor);
+  color: #fff;
+  font-family: Merriweather Sans, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: initial;
+  min-height: 100vh;
+  min-width: 320px;
+  padding-bottom: 200px;
+}
+img {
+  height: auto;
+  max-width: 100%;
+}
+button {
+  cursor: pointer;
+  padding: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+fieldset,
+figure,
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+iframe {
+  border: none;
+}
+.visually-hidden {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  border: 0;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.button {
+  background: linear-gradient(
+    87.4deg,
+    #2e00b1 -11.74%,
+    #8100bd 48.81%,
+    #a400be 113.27%
+  );
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+.active {
+  color: #c6b6d7;
+  color: var(--text);
+}

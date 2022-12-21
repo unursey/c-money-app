@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  padding-top: 60px;
+  justify-content: center;
+}
+
+.title {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+};

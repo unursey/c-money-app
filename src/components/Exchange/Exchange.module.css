@@ -1,0 +1,239 @@
+.container {
+  padding-top: 60px;
+}
+.title {
+  font-family: Comfortaa;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 29px;
+  margin-bottom: 40px;
+}
+.text {
+  color: var(--text);
+  display: inline-block;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 30px;
+  width: 70px;
+}
+.text:first-of-type {
+  margin-bottom: 15px;
+}
+.text_white {
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.balance:after {
+  content: ' ₽';
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.rates__wrapper {
+  min-width: 560px;
+  background: var(--header);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 30px 40px 10px 10px;
+  border: 15px solid var(--header);
+}
+.rates__wrapper::-webkit-scrollbar {
+  width: 4px;
+  background-color: var(--header);
+}
+.rates__wrapper::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: var(--pink);
+}
+.rates__title {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+}
+.tr_e {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 7px;
+}
+.loader__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.td__first {
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  vertical-align: bottom;
+}
+.td__second {
+  border-bottom: 1px solid var(--bgcolor);
+  width: 100%;
+}
+.td__third {
+  align-items: center;
+  display: flex;
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 700;
+  gap: 5px;
+  justify-content: flex-end;
+  line-height: 100%;
+  margin-top: 20px;
+}
+.right__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.exchange__wrapper {
+  background-color: var(--header);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  padding: 15px 20px 20px;
+}
+.exchange__title {
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 27px;
+  margin-bottom: 15px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.inputs__wrapper {
+  display: flex;
+  margin-bottom: 25px;
+}
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  position: relative;
+}
+.input__wrapper:not(:last-of-type) {
+  margin-right: 35px;
+}
+.label {
+  color: var(--text);
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 2px;
+  padding-left: 10px;
+}
+.input {
+  border-radius: 6px;
+  padding: 10px;
+}
+.input:last-of-type {
+  width: 147px;
+}
+.button {
+  align-self: flex-end;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  max-width: 150px;
+  padding: 6px 30px;
+  background: linear-gradient(
+    87.4deg,
+    #2e00b1 -11.74%,
+    #8100bd 48.81%,
+    #a400be 113.27%
+  );
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+.button:hover {
+  background: linear-gradient(
+    88.2deg,
+    #a400be -14.85%,
+    #8100bd 50.2%,
+    #2e00b1 115.25%,
+    #2e00b1 115.25%
+  );
+}
+.button:focus {
+  background: linear-gradient(
+    88.2deg,
+    #2e00b1 -14.85%,
+    #a400be 50.2%,
+    #2e00b1 115.25%,
+    #2e00b1 115.25%
+  );
+}
+.button:active {
+  background: #2e00b1;
+}
+.currency__title {
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+.td__code {
+  color: var(--text);
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 45px;
+}
+.td__amount {
+  font-family: Nunito;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.form__error {
+  color: tomato;
+  font-size: 12px;
+  position: absolute;
+  right: 0;
+  top: -30px;
+}
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .rates__wrapper {
+    height: 330px;
+    padding-right: 20px;
+  }
+  .rates__title {
+    text-align: center;
+  }
+  .inputs__wrapper {
+    flex-direction: column;
+  }
+  .input-wrapper:not(:last-of-type) {
+    margin-right: 0;
+  }
+  .input:last-of-type {
+    width: 100%;
+  }
+}
