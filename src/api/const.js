@@ -1,2 +1,2 @@
-export const URL_API = 'https://nebulous-hexagonal-mortarboard.glitch.me/';
-export const URL_API_WS = 'wss://nebulous-hexagonal-mortarboard.glitch.me/currency-feed';
+export const URL_API = 'https://imported-complex-hide.glitch.me/';
+export const URL_API_WS = 'wss://imported-complex-hide.glitch.me/currency-feed';
