@@ -1,5 +1,5 @@
 import style from './Exchange.module.css';
-import {useRef, useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import {SVG} from '../../UI/SVG/SVG';
 import Layout from '../Layout';
 import {URL_API_WS, URL_API} from '../../api/const';
@@ -17,10 +17,11 @@ export const Exchange = () => {
   const [showModalOk, setShowModalOk] = useState(false);
   const [message, setMessage] = useState('');
   const [cur, setCur] = useState([]);
-  const selectFrom = useRef(null);
-  const selectTo = useRef(null);
+  // const selectFrom = useRef(null);
+  // const selectTo = useRef(null);
   const navigate = useNavigate();
   const [countCur, setCountCur] = useState(1);
+  const [selected, setSelected] = useState({from: '', to: ''});
 
   useEffect(() => {
     if (!token) {
@@ -60,7 +61,7 @@ export const Exchange = () => {
       const i = JSON.parse(e.data);
       data.push(i);
       count++;
-      if (count > 6) {
+      if (count > 15) {
         data.shift();
       }
       setBarData([...data]);
@@ -87,13 +88,15 @@ export const Exchange = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (amount !== '' && selectFrom.current.value !== selectTo.current.value) {
+    if (amount !== '') {
+    // && selectFrom.current.value !== selectTo.current.value)
+
       axios({
         method: 'post',
         url: `${URL_API}/currency-buy`,
         data: {
-          from: selectFrom.current.value,
-          to: selectTo.current.value,
+          from: selected.from,
+          to: selected.to,
           amount,
         },
         headers: {
@@ -136,9 +139,19 @@ export const Exchange = () => {
             <h3 className={style.rates__title}>
               Изменение курса в режиме реального времени
             </h3>
-            <div className={style.tbody}>
+            <div>
               {barData.map((item, index) => (
-                <div className={style.tr_e} key={index}>
+                <div
+                  className={style.tr_e}
+                  key={index}
+                  onClick={() => {
+                    if (item.change === 1) {
+                      setSelected({from: item.from, to: item.to});
+                    } else {
+                      setSelected({from: item.to, to: item.from});
+                    }
+                  }}
+                >
                   <span
                     className={style.td__first}>{item?.from}/{item?.to}</span>
                   <span className={style.td__second}/>
@@ -162,14 +175,27 @@ export const Exchange = () => {
                 <div className={style.inputs__wrapper}>
                   <div className={style.input__wrapper}>
                     <label className={style.label} htmlFor='from'>Откуда</label>
-                    <select className={style.input} ref={selectFrom}>
-                      <Option />
+                    <select className={style.input}
+                      // ref={selectFrom}
+                      value={selected.from}
+                      onChange={(e) => {
+                        setSelected({...selected, from: e.target.value});
+                      }}
+                    >
+                      <Option selected={selected.to} />
                     </select>
                   </div>
                   <div className={style.input__wrapper}>
                     <label className={style.label}>Куда</label>
-                    <select className={style.input} ref={selectTo}>
-                      <Option />
+                    <select className={style.input}
+                      // ref={selectTo}
+                      value={selected.to}
+                      onChange={(e) => {
+                        setSelected({...selected, to: e.target.value});
+                        console.log('selected: ', selected);
+                      }}
+                    >
+                      <Option selected={selected.from} />
                     </select>
                   </div>
                   <div className={style.input__wrapper}>
@@ -202,7 +228,11 @@ export const Exchange = () => {
                 </thead>
                 <tbody>
                   {cur.length > 0 ? cur.map(item => (
-                    <tr className={style.tr} key={item.code}>
+                    <tr className={style.tr} key={item.code}
+                      onClick={() => {
+                        setSelected({...selected, from: item.code});
+                      }}
+                    >
                       <td className={style.td__code}>{item.code}</td>
                       <td className={style.td__amount}>
                         {Number.isInteger(item.amount) ?

@@ -42,7 +42,7 @@
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 350px;
+  height: 400px;
   overflow-x: hidden;
   overflow-y: auto;
   padding: 30px 40px 10px 10px;
@@ -54,7 +54,7 @@
 }
 .rates__wrapper::-webkit-scrollbar-thumb {
   border-radius: 1px;
-  background-color: var(--pink);
+  background-color: var(--bgcolor);
 }
 .rates__title {
   font-family: Nunito;
@@ -62,11 +62,15 @@
   font-weight: 600;
   line-height: 27px;
 }
+.tr {
+  cursor: pointer;
+}
 .tr_e {
   align-items: flex-end;
   display: flex;
   justify-content: space-between;
   padding-top: 7px;
+  cursor: pointer;
 }
 .loader__container {
   display: flex;
